@@ -3,6 +3,24 @@ www for rpi apache https VR dualview picamera pan-tilt motion remote, gyro acc
 
 Po spusteni Rpi4 s raspbianem-buster 10.0 
 
+cat /proc/cpuinfo
+lsb_release -d
+cat /etc/os-release
+uname -a
+getconf LONG_BIT
+Tento příkaz vrací buď číslo 32 nebo 64 podle toho, jestli je operační systém 32bitový (hodnota 32) nebo 64bitový (hodnota 64).
+
+Dale nainstalujte:
+https://github.com/silvanmelchior/RPi_Cam_Web_Interface -dle navodu na teto strance.
+Pro podrobnejsi informace a pozadavky pouzijte : https://elinux.org/RPi-Cam-Web-Interface
+po uspesne instalaci a nastaveni, vcetne odzkouseni funkcnosti, pokracujte na :  https://www.instructables.com/Raspberry-Pi-Cam-Pan-Tilt-Control-Over-Local-Inter/
+a po dokonceni tohoto navodu pouzijte soubory z tohoto uloziste pro usb cameru,stranku s ovladanim pro pan-tilt v GUI rozhrani, zobrazovani gyroskopu a akcelerometru v uhlovem ukazately.
+
+
+
+
+
+
 sudo nano /boot/config.txt
 
 nainstaluji :
@@ -12,6 +30,8 @@ nainstaluji :
 
 
 sudo raspi-config
+
+
  1009  sudo apt install libraspberrypi0 libraspberrypi raspberrypi-bootloader raspberrypi-kernel
  1010  sudo apt install libraspberrypi0 raspberrypi-bootloader raspberrypi-kernel
  1011  sudo apt install --reinstall libraspberrypi0 raspberrypi-bootloader raspberrypi-kernel
@@ -85,26 +105,7 @@ sudo raspi-config
  1206  sudo chmod +x html
  1207  sudo nano flaskservo.py
  1208  python3 flaskservo.py
- 1209  sudo nano flaskservo.py
- 1210  python3 flaskservo.py
- 1211  sudo nano flaskservo.py
- 1212  python3 flaskservo.py
- 1213  sudo nano flaskservo.py
- 1214  python3 flaskservo.py
- 1215  sudo nano flaskservo.py
- 1216  python3 flaskservo.py
- 1217  python3 flaskservo1.py
- 1218  sudo nano flaskservo.py
- 1219  python3 flaskservo.py
- 1220  sudo nano flaskservo.py
- 1221  python3 flaskservo.py
- 1222  dir
- 1223  python3 servoblaster.py 
- 1224  python servoblaster.py 
- 1225  sudo nano servoblaster.py 
- 1226  python servoblaster.py 
- 1227  sudo nano servoblaster.py 
- 1228  python servoblaster.py 
+
  1229  sudo nano servoblaster.py 
  1230  python servoblaster.py 
  1231  sudo nano servoblaster.py 
@@ -136,11 +137,7 @@ sudo raspi-config
  1257  echo 3=2000 > /dev/servoblaster
  1258  echo 3=50 > /dev/servoblaster
  1259  echo 3=60 > /dev/servoblaster
- 1260  sudo make install
- 1261  sudo apt install ros-melodic-pcl-ros
- 1262  sudo apt_get install ros-melodic-pcl-ros
- 1263  sudo apt-get install ros-melodic-pcl-ros
- 1264  sudo apt install ros-melodic-pcl-ros
+ 1260  
  1265  sudo stop.sh
  1266  sudo stop.sh start
  1267  sudo stop.sh install
